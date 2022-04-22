@@ -24,10 +24,12 @@ useEffect(() => {
     {
       characters.map((character, index)=> (
         <article key={`app-characters-map${index}-${character.name}`}>
-          <h2>{character.name}</h2>
-          <img src={character.homeworld} />
-          
-
+          <h2>Name: {character.name}</h2>
+          <p>Height: {character.height}</p>
+          <p>HairColor: {character.hair_color}</p>
+          <p>EyeColor: {character.eye_color}</p>
+          <p>Birth Year: {character.birth_year}</p>
+          <p>Gender: {character.gender}</p>
         </article>
       ))
     }
@@ -36,3 +38,4 @@ useEffect(() => {
 }
 
 export default App;
+
