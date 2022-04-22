@@ -85,4 +85,4 @@ Updates the state object
 1. Describe props.
 a set of data passed from parent to child.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-You can alter a function outside of you application, dont need to reside in the same method
+You can alter a function outside of you application, dont need to reside in the same method.
