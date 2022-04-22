@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import StarWarsCharacter from './components/Character';
-const App = () => {
-  const [data, setData] = useState();
+function App () {
+  const [characters, setCharacters] = useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -10,10 +10,10 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 useEffect(() => {
-  axios.get(`[GET] https://swapi.dev/api/people`)
+  axios.get(`https://swapi.dev/api/people`)
   .then(res => {
-    // console.log(res.data)
-    setData(res.data)
+    console.log(res.data.results)
+    setCharacters(res.data.results)
   })
   .catch(err => console.error(err))
 }, [])
@@ -21,7 +21,16 @@ useEffect(() => {
 
   return (
     <div className="App">
-      {data && <StarWarsCharacter star={data} />}
+    {
+      characters.map((character, index)=> (
+        <article key={`app-characters-map${index}-${character.name}`}>
+          <h2>{character.name}</h2>
+          <img src={character.homeworld} />
+          
+
+        </article>
+      ))
+    }
     </div>
   );
 }
