@@ -79,6 +79,10 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+It helps build interfaces that can be changed on the fly.
 1. Describe component state.
+Updates the state object
 1. Describe props.
+a set of data passed from parent to child.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+You can alter a function outside of you application, dont need to reside in the same method
