@@ -8,7 +8,7 @@ function App () {
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  // sync up with, if any. blah
 useEffect(() => {
   axios.get(`https://swapi.dev/api/people`)
   .then(res => {
@@ -24,7 +24,7 @@ useEffect(() => {
     {
       characters.map((character, index)=> (
         <article key={`app-characters-map${index}-${character.name}`}>
-          <h2>Name: {character.name}</h2>
+          <h1>Name: {character.name}</h1>
           <p>Height: {character.height}</p>
           <p>HairColor: {character.hair_color}</p>
           <p>EyeColor: {character.eye_color}</p>
@@ -37,5 +37,5 @@ useEffect(() => {
   );
 }
 
-export default App;
+export default App; 
 
