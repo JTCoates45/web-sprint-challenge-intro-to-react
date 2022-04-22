@@ -12,7 +12,7 @@ function App () {
 useEffect(() => {
   axios.get(`https://swapi.dev/api/people`)
   .then(res => {
-    console.log(res.data.results)
+    // console.log(res.data.results)
     setCharacters(res.data.results)
   })
   .catch(err => console.error(err))
@@ -23,7 +23,7 @@ useEffect(() => {
     <div className="App">
     {
       characters.map((character, index)=> (
-        <article key={`app-characters-map${index}-${character.name}`}>
+        <article key={`characters-map${index}-${character.name}`}>
           <h1>Name: {character.name}</h1>
           <p>Height: {character.height}</p>
           <p>HairColor: {character.hair_color}</p>
